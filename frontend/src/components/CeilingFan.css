@@ -1,0 +1,300 @@
+
+.atom-fan-stage {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 50% 42%, #ffffff 0%, #f8f5ef 60%, #eee8dd 100%);
+  border-radius: 24px;
+  perspective: 1000px;
+}
+
+/* Ceiling */
+.atom-ceiling {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 13px;
+  background: linear-gradient(#ddd5c8, #faf7f0);
+  box-shadow: 0 5px 15px #00000010;
+}
+
+/* Suspension */
+.atom-suspension {
+  position: absolute;
+  top: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Canopy */
+.atom-canopy {
+  position: relative;
+  width: 34px;
+  height: 30px;
+  border-radius: 0 0 13px 13px;
+  background: linear-gradient(90deg, #171717, #444, #181818);
+  box-shadow: 0 4px 8px #00000025;
+}
+
+.canopy-highlight {
+  position: absolute;
+  left: 7px;
+  width: 4px;
+  height: 20px;
+  background: #ffffff20;
+  border-radius: 4px;
+}
+
+/* Downrod */
+.atom-downrod {
+  width: 10px;
+  height: 48px;
+  background: linear-gradient(90deg, #111, #555, #151515);
+  border-radius: 4px;
+}
+
+/* Motor */
+.atom-motor {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.motor-top {
+  width: 38px;
+  height: 18px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #252525, #080808);
+}
+
+.motor-body {
+  position: relative;
+  width: 94px;
+  height: 66px;
+  border-radius: 48% 48% 38% 38%;
+  background:
+    radial-gradient(ellipse at 30% 18%, #444 0%, #171717 45%, #050505 100%);
+  box-shadow:
+    0 8px 12px #00000020,
+    inset 0 2px 3px #ffffff25,
+    inset 0 -4px 8px #00000080;
+}
+
+.motor-highlight {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  width: 4px;
+  height: 38px;
+  background: #ffffff12;
+  border-radius: 5px;
+}
+
+.motor-band {
+  position: absolute;
+  top: 48px;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #080808, #333, #080808);
+}
+
+.motor-indicator {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.motor-indicator span {
+  width: 4px;
+  height: 4px;
+  background: #53aaff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #53aaff;
+}
+
+/* Rotor */
+.atom-rotor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: 3;
+  will-change: transform;
+}
+
+/* Wooden blades */
+.atom-blade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 205px;
+  height: 34px;
+  transform-origin: 0 50%;
+  margin-top: -17px;
+  border-radius: 5px 65% 65% 5px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      #d4a36b 0%,
+      #b77d43 15%,
+      #9b642f 45%,
+      #b78045 75%,
+      #d1a16a 100%
+    );
+  border: 1px solid #8b592d;
+  box-shadow:
+    0 4px 7px #00000020,
+    inset 0 1px 2px #ffffff35,
+    inset 0 -2px 3px #5c351b35;
+}
+
+/* Wood grain */
+.blade-wood-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background: repeating-linear-gradient(
+    175deg,
+    transparent 0px,
+    transparent 4px,
+    #633b1c30 5px,
+    transparent 7px,
+    #e8bb8050 9px,
+    transparent 12px
+  );
+}
+
+/* Blade reflection */
+.blade-highlight {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  width: 80%;
+  height: 2px;
+  background: #ffe0ad50;
+  border-radius: 50%;
+}
+
+/* Blade tip */
+.blade-tip {
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  width: 2px;
+  height: 22px;
+  background: #6d401f30;
+}
+
+/* Center cap */
+.atom-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #505050, #111 65%, #050505);
+  border: 2px solid #454545;
+  box-shadow: 0 4px 8px #00000030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-ring {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  background: radial-gradient(circle, #333, #111);
+}
+
+.center-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #777;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+}
+
+/* Shadow */
+.atom-floor-shadow {
+  position: absolute;
+  bottom: 28px;
+  width: 220px;
+  height: 22px;
+  border-radius: 50%;
+  background: #000;
+  filter: blur(18px);
+  transition: opacity 0.8s ease;
+}
+
+/* Status */
+.atom-fan-status {
+  position: absolute;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #817a6c;
+}
+
+.atom-status-light {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.atom-status-light.on {
+  background: #20a56a;
+  box-shadow: 0 0 8px #20a56a80;
+}
+
+.atom-status-light.off {
+  background: #a5a5a5;
+}
+
+.atom-status-divider {
+  height: 12px;
+  width: 1px;
+  background: #d9d2c7;
+}
+
+.atom-rpm {
+  color: #a87909;
+  letter-spacing: 0.4px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .atom-fan-stage {
+    height: 290px;
+  }
+
+  .atom-blade {
+    width: 160px;
+    height: 29px;
+    margin-top: -14.5px;
+  }
+}
